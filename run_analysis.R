@@ -115,5 +115,11 @@ runAnalysis<-function(){
         
         ## create tidy data
         c<-aggregate( a, by=list(activity=a$subjectactivity, subject=a$subject),  FUN=mean,na.rm=TRUE )
+        
+        ## Remove the subject and activity column, because a mean of those has no use
+        c[,83] = NULL
+        c[,82] = NULL
+        
+        ## save data set into file tidy.txt
         write.table(c, "tidy.txt", sep="\t")
 }
