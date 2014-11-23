@@ -1,4 +1,4 @@
-wearableComp<-function(){
+runAnalysis<-function(){
         target_url <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
         zip_localfile = "wearable_comp.zip"
         data_dir="UCI HAR Dataset"
